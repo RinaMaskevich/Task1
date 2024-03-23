@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Произвольный массив (замените значения на свои)
+        int[] myArray = { 10, 20, 30, 40, 50 };
+
+        Console.WriteLine("Элементы массива, начиная с конца:");
+        PrintArrayReversely(myArray, myArray.Length - 1);
+
+        Console.ReadLine();
+    }
+
+    // Рекурсивная функция для вывода элементов массива с конца
+    static void PrintArrayReversely(int[] array, int currentIndex)
+    {
+        if (currentIndex >= 0)
+        {
+            Console.Write($"{array[currentIndex]} ");
+            PrintArrayReversely(array, currentIndex - 1);
+        }
+    }
+}
